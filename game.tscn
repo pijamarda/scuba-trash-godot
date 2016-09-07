@@ -2,7 +2,7 @@
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://fondo marino_800x600.png" type="Texture" id=2]
-[ext_resource path="res://perro_peque.png" type="Texture" id=3]
+[ext_resource path="res://assets/img/dude/scuba-diving-147683_640.png" type="Texture" id=3]
 [ext_resource path="res://huesito.png" type="Texture" id=4]
 [ext_resource path="res://doghouse 1.png" type="Texture" id=5]
 [ext_resource path="res://assets/img/animals/lobster-1.png" type="Texture" id=6]
@@ -41,10 +41,34 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 400.728, 295.693 )
 texture = ExtResource( 2 )
 
-[node name="dog" type="Sprite" parent="."]
+[node name="dude" type="Sprite" parent="."]
 
-transform/pos = Vector2( 182.29, 429.878 )
+transform/pos = Vector2( 166.226, 436.252 )
+transform/scale = Vector2( 0.239966, 0.233014 )
 texture = ExtResource( 3 )
+
+[node name="burbujas" type="Particles2D" parent="dude"]
+
+transform/pos = Vector2( 277.907, -49.7343 )
+transform/scale = Vector2( 3.33557, 2.40559 )
+config/amount = 32
+config/lifetime = 2.0
+params/direction = 180.0
+params/spread = 10.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
 
 [node name="bone" type="Sprite" parent="."]
 
