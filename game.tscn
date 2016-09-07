@@ -49,13 +49,14 @@ texture = ExtResource( 3 )
 
 [node name="burbujas" type="Particles2D" parent="dude"]
 
-transform/pos = Vector2( 277.907, -49.7343 )
-transform/scale = Vector2( 3.33557, 2.40559 )
+transform/pos = Vector2( 0, -100.951 )
+transform/scale = Vector2( 3.33557, 5.5603 )
 config/amount = 32
 config/lifetime = 2.0
+config/local_space = false
 params/direction = 180.0
 params/spread = 10.0
-params/linear_velocity = 20.0
+params/linear_velocity = 53.4563
 params/spin_velocity = 0.0
 params/orbit_velocity = 0.0
 params/gravity_direction = 0.0

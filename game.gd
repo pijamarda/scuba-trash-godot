@@ -3,6 +3,7 @@ extends Node2D
 
 var screen_size
 var dude_size
+var dude_pos
 
 #speed of the bone (in pixels/second)
 var bone_speed = 150
@@ -16,6 +17,9 @@ const DUDE_SPEED = 150
 func _ready():
 	screen_size = get_viewport_rect().size
 	dude_size = get_node("dude").get_texture().get_size()
+	dude_pos = get_node("dude").get_pos()
+	#get_node("dude/burbujas").set_pos(Vector2(dude_pos.x + (dude_size.x / 2), dude_pos.y/2))
+	get_node("dude/burbujas").set_pos(Vector2(-85 + dude_size.x / 2, -40))
 	set_process(true)
 	pass
 
@@ -45,8 +49,10 @@ func _process(delta):
 		dude_pos.x += -DUDE_SPEED * delta
 		get_node("dude").set_flip_h(true)
 		get_node("dude").get_node("burbujas").set_pos(Vector2(0, -49))
+		get_node("dude/burbujas").set_pos(Vector2(85 - dude_size.x / 2, -40))
 	if (dude_pos.x < screen_size.x and Input.is_action_pressed("dude_move_right")):
 		dude_pos.x += DUDE_SPEED * delta
 		get_node("dude").set_flip_h(false)
+		get_node("dude/burbujas").set_pos(Vector2(-85 + dude_size.x / 2, -40))
 	
 	get_node("dude").set_pos(dude_pos)
